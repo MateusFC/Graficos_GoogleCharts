@@ -11,10 +11,8 @@
         google.charts.setOnLoadCallback(drawChart2);
         google.charts.setOnLoadCallback(AreChart);
 
-        function drawChart() {
-            
+        function drawChart() {           
             let data = google.visualization.arrayToDataTable(<%=obterDados()%>);
-
             let options = {
                 title: 'Linguagens de Programação',
                 Legend: {
@@ -32,9 +30,7 @@
                     15: { offset: 0.5 },
                 },
             };
-
             let chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
             chart.draw(data, options);
         }
         function drawChart2() {
@@ -76,10 +72,6 @@
             let chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
             chart.draw(data, options);
         }
-
-
-
-
     </script>
 </head>
 <body style="background-color:#000000;">
